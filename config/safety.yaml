@@ -1,0 +1,29 @@
+# Safety Gate Configuration
+# Blocks harmful queries before processing
+
+blocked_keywords:
+  - "hack"
+  - "exploit"
+  - "bypass security"
+  - "create malware"
+  - "create virus"
+  - "illegal"
+  - "steal password"
+
+blocked_patterns:
+  - "how to (kill|harm|hurt|murder)"
+  - "bypass.*authentication"
+  - "crack.*password"
+  - "steal.*data"
+  - "make.*(bomb|weapon|explosive)"
+
+constraints:
+  max_query_length: 1000
+  min_query_length: 3
+
+# Allowlist - bypass safety for legitimate queries
+allowlist_patterns:
+  - "cybersecurity best practices"
+  - "ethical hacking"
+  - "security audit"
+  - "penetration testing"
